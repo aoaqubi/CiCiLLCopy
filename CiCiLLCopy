@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<style>
+
+body{
+  margin:0;
+  background:#0b0b0b;
+  color:white;
+  font-family:sans-serif;
+}
+
+.hero{
+  height:100vh;
+
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+
+  text-align:center;
+}
+
+.hero h1{
+  font-size:clamp(40px,8vw,120px);
+  margin:0;
+
+  animation: fadeUp 1.5s;
+}
+
+.hero p{
+  color:#999;
+  margin-top:20px;
+
+  animation: fadeUp 2s;
+}
+
+.btn{
+  margin-top:40px;
+
+  padding:15px 40px;
+
+  border:1px solid white;
+
+  background:transparent;
+  color:white;
+
+  cursor:pointer;
+
+  transition:0.3s;
+}
+
+.btn:hover{
+  background:white;
+  color:black;
+}
+
+.section{
+  padding:120px 10vw;
+}
+
+.card{
+  border:1px solid #333;
+  padding:40px;
+  margin-top:30px;
+
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-10px);
+  border-color:white;
+}
+
+@keyframes fadeUp{
+  from{
+    opacity:0;
+    transform:translateY(40px);
+  }
+
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+
+<h1>SOLUTION</h1>
+
+<p>modern horror interface</p>
+
+<button class="btn">
+ENTER
+</button>
+
+</section>
+
+<section class="section">
+
+<div class="card">
+<h2>Skull System</h2>
+<p>燃えるドクロ演出</p>
+</div>
+
+<div class="card">
+<h2>Noise Engine</h2>
+<p>ノイズと音響</p>
+</div>
+
+</section>
+
+</body>
+</html>
