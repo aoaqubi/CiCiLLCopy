@@ -14,37 +14,12 @@
   .flash{
   position:fixed;
   inset:0;
-
   background:white;
+  opacity:0;
 
+  animation:introFlash 2s;
   pointer-events:none;
-
-  animation: introFlash 1.8s forwards;
-
-  z-index:9999;
 }
-
-@keyframes introFlash{
-
-  0%{
-    opacity:1;
-  }
-
-  15%{
-    opacity:0;
-  }
-
-  30%{
-    opacity:1;
-  }
-
-  45%{
-    opacity:0;
-  }
-
-  100%{
-    opacity:0;
-  }
 
 }
   
