@@ -4,15 +4,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-
 <style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
 
 body{
-  margin:0;
-  background:#0b0b0b;
+  background:#0d0d0d;
   color:white;
-  font-family:sans-serif;
+  font-family:Arial,sans-serif;
 }
 
 .hero{
@@ -21,74 +23,81 @@ body{
   display:flex;
   flex-direction:column;
   justify-content:center;
-  align-items:center;
 
-  text-align:center;
+  padding:0 10vw;
 }
 
 .hero h1{
-  font-size:clamp(40px,8vw,120px);
-  margin:0;
-
-  animation: fadeUp 1.5s;
+  font-size:clamp(60px,10vw,140px);
+  font-weight:700;
 }
 
 .hero p{
-  color:#999;
   margin-top:20px;
-
-  animation: fadeUp 2s;
+  color:#999;
+  font-size:20px;
 }
 
-.skull{
+.btn{
   margin-top:40px;
 
-  padding:15px 40px;
+  display:inline-block;
+
+  padding:16px 40px;
 
   border:1px solid white;
 
-  background:transparent;
   color:white;
+  text-decoration:none;
 
-  cursor:pointer;
-
-  transition:0.3s;
+  transition:.3s;
 }
 
-.skull:hover{
+.btn:hover{
   background:white;
   color:black;
 }
 
-.section{
+.solutions{
   padding:120px 10vw;
+}
+
+.solutions h2{
+  font-size:48px;
+  margin-bottom:50px;
+}
+
+.grid{
+  display:grid;
+
+  grid-template-columns:
+    repeat(auto-fit,minmax(300px,1fr));
+
+  gap:30px;
 }
 
 .card{
   border:1px solid #333;
-  padding:40px;
-  margin-top:30px;
 
-  transition:0.3s;
+  padding:40px;
+
+  transition:.3s;
 }
 
 .card:hover{
-  transform:translateY(-10px);
+  transform:translateY(-8px);
   border-color:white;
 }
 
-@keyframes fadeUp{
-  from{
-    opacity:0;
-    transform:translateY(40px);
-  }
-
-  to{
-    opacity:1;
-    transform:translateY(0);
-  }
+.card h3{
+  margin-bottom:15px;
+  font-size:24px;
 }
 
+.card p{
+  color:#999;
+  line-height:1.8;
+}
 </style>
 </head>
 
@@ -96,26 +105,45 @@ body{
 
 <section class="hero">
 
-<h1>SMASH BROS.</h1>
+<h1>SISILLWARE</h1>
 
-<p>ニンテンドウオールスター</p>
+<p>
+Digital Solutions for the Future
+</p>
 
-<a href="skull.html">
-  <button class="skull">クリックで覗いてみよう</button>
+<a href="#" class="btn">
+VIEW MORE
 </a>
 
 </section>
 
-<section class="section">
+<section class="solutions">
+
+<h2>SOLUTION</h2>
+
+<div class="grid">
 
 <div class="card">
-<h2>Skull System</h2>
-<p>燃えるドクロはおばあちゃんの家に落ちる</p>
+<h3>System Development</h3>
+<p>
+Webシステム開発
+</p>
 </div>
 
 <div class="card">
-<h2>No dokuro No Life</h2>
-<p>喉黒の人生</p>
+<h3>Cloud Services</h3>
+<p>
+クラウド導入支援
+</p>
+</div>
+
+<div class="card">
+<h3>Security</h3>
+<p>
+セキュリティ対策
+</p>
+</div>
+
 </div>
 
 </section>
