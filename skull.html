@@ -6,6 +6,7 @@
 
 <style>
 body{
+  margin:0;
   background:black;
   overflow:hidden;
   margin:0;
@@ -16,11 +17,6 @@ body{
   align-items:center;
 }
 
-  body{
-  background:black;
-  overflow:hidden;
-}
-
 .skull-container{
   position:fixed;
   inset:0;
@@ -29,18 +25,12 @@ body{
 
 .skull{
   position:absolute;
-  font-size:60px;
+  width:80px;
+  height:80px;
 
   opacity:0;
-  animation: attack 1.5s infinite;
+  animation: attack 2s linear forwards;
 }
-
-/* ランダム配置 */
-.skull:nth-child(1){ left:10%; top:20%; animation-delay:0s; }
-.skull:nth-child(2){ left:70%; top:10%; animation-delay:0.2s; }
-.skull:nth-child(3){ left:40%; top:60%; animation-delay:0.4s; }
-.skull:nth-child(4){ left:80%; top:70%; animation-delay:0.6s; }
-.skull:nth-child(5){ left:20%; top:80%; animation-delay:0.8s; }
 
 @keyframes attack{
   0%{
@@ -50,12 +40,8 @@ body{
   30%{
     opacity:1;
   }
-  70%{
-    transform: scale(1.2) translateY(0);
-    opacity:1;
-  }
   100%{
-    transform: scale(2) translateY(-200px);
+    transform: scale(1.5) translateY(-200px);
     opacity:0;
   }
 }
@@ -65,13 +51,7 @@ body{
 
 <body>
 
-<div class="skull-container">
-  <div class="skull">💀</div>
-  <div class="skull">💀</div>
-  <div class="skull">💀</div>
-  <div class="skull">💀</div>
-  <div class="skull">💀</div>
-</div>
+<div class="skull-container"></div>
 
 </body>
   
