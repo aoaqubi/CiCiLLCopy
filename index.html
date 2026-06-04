@@ -9,6 +9,48 @@
   margin:0;
   padding:0;
   box-sizing:border-box;
+  header{
+  position:fixed;
+
+  top:0;
+  left:0;
+
+  width:100%;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  padding:25px 5vw;
+
+  background:rgba(0,0,0,0.7);
+
+  backdrop-filter:blur(10px);
+
+  z-index:1000;
+}
+
+.logo{
+  font-size:24px;
+  font-weight:bold;
+}
+
+nav{
+  display:flex;
+  gap:30px;
+}
+
+nav a{
+  color:white;
+  text-decoration:none;
+
+  transition:.3s;
+}
+
+nav a:hover{
+  opacity:.6;
+}
+  
 }
 
 body{
@@ -16,6 +58,17 @@ body{
   color:white;
   font-family:Arial,sans-serif;
 }
+
+  <header>
+  <div class="logo">SISILLWARE</div>
+
+  <nav>
+    <a href="#">HOME</a>
+    <a href="#">ABOUT</a>
+    <a href="#">SERVICE</a>
+    <a href="#">CONTACT</a>
+  </nav>
+</header>
 
 .hero{
   height:100vh;
