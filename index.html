@@ -10,6 +10,43 @@
   scroll-behavior:smooth;
 }
 *{
+
+  .flash{
+  position:fixed;
+  inset:0;
+
+  background:white;
+
+  pointer-events:none;
+
+  animation: introFlash 1.8s forwards;
+
+  z-index:9999;
+}
+
+@keyframes introFlash{
+
+  0%{
+    opacity:1;
+  }
+
+  15%{
+    opacity:0;
+  }
+
+  30%{
+    opacity:1;
+  }
+
+  45%{
+    opacity:0;
+  }
+
+  100%{
+    opacity:0;
+  }
+
+}
   
   margin:0;
   padding:0;
@@ -149,6 +186,8 @@ body{
 </head>
 
 <body>
+
+  <div class="flash"></div>
 
   <header>
   <div class="logo">SMASH BROS.</div>
