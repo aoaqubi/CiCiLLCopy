@@ -61,8 +61,40 @@ body{
   <source src="heri.mp3" type="audio/mpeg">
 </audio>
 
-</body>
-</html>
+  <script>
+const container = document.querySelector(".skull-container");
+
+function spawnSkull(){
+
+  const img = document.createElement("img");
+  img.src = "skull.png";
+  img.className = "skull";
+
+  // ランダム位置
+  img.style.left = Math.random() * window.innerWidth + "px";
+  img.style.top = Math.random() * window.innerHeight + "px";
+
+  // ランダムサイズ
+  const size = 40 + Math.random() * 100;
+  img.style.width = size + "px";
+  img.style.height = size + "px";
+
+  // ランダム遅延（自然にバラける）
+  img.style.animationDuration = (1 + Math.random() * 2) + "s";
+
+  container.appendChild(img);
+
+  // 終わったら削除
+  setTimeout(()=>{
+    img.remove();
+  }, 3000);
+}
+
+// 連続出現
+setInterval(()=>{
+  spawnSkull();
+}, 200);
+</script>
 
 </body>
 </html>
