@@ -103,6 +103,19 @@ body{
   75%{ transform: translate(2px,2px); }
   100%{ transform: translate(0,0); }
 }
+
+  body.p5-mode::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  background:rgba(255,0,0,0.1);
+  pointer-events:none;
+}
+
+  body.p5-mode .card{
+  border-color:red;
+  transform:skew(-3deg);
+}
   
 .hero{
   height:100vh;
@@ -425,6 +438,8 @@ document.querySelectorAll(".p5-trigger").forEach(card => {
     document.body.classList.toggle("p5-mode");
   });
 });
+
+    document.body.classList.remove("p5-mode");
   
 </script>
 
