@@ -232,6 +232,36 @@ a:hover {
   transform: translateY(-3px) scale(1.05);
   opacity: 0.8;
 }
+
+  .footer{
+  padding:60px 10vw;
+  margin-top:100px;
+
+  border-top:1px solid #333;
+
+  text-align:center;
+
+  color:white;
+  background:#0d0d0d;
+}
+
+.footer p{
+  margin:10px 0;
+  color:#999;
+}
+
+.footer a{
+  color:white;
+  text-decoration:none;
+  margin:0 10px;
+
+  transition:0.3s;
+}
+
+.footer a:hover{
+  opacity:0.6;
+}
+  
   
 </style>
 </head>
@@ -373,6 +403,14 @@ cards.forEach((card)=>{
   observer.observe(card);
 });
 </script>
+
+  <footer class="footer">
+  <p>© 2026 SMASH BROS.</p>
+  <p>
+    <a href="https://github.com/aoaqubi">GitHub</a> /
+    <a href="https://x.com/aquma7fffd4">X</a>
+  </p>
+</footer>
   
 </body>
 </html>
