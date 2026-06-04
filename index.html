@@ -145,6 +145,10 @@ body{
 }
 
 .card{
+  display:block;
+  text-decoration:none;
+  color:white;
+  
   border:1px solid #333;
   padding:40px;
 
@@ -155,6 +159,7 @@ body{
     opacity 2s,
     transform 0.4s,
     border-color 0.4s;
+    box-shadow 0.4s;
 
   cursor: pointer;
 }
@@ -328,14 +333,10 @@ Star Fox</p>
 
 <div class="grid">
 
-  <div class="card">
-    <h3>X</h3>
-    <p>
-      <a href="https://x.com/aquma7fffd4">
-      @aquma7fffd4
-    </a>
-   </p>
- </div>
+  <a href="https://x.com/aquma7fffd4" class="card">
+  <h3>X</h3>
+  <p>@aquma7fffd4</p>
+</a>
 
 <div class="card">
   <h3>GitHub</h3>
