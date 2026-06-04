@@ -85,15 +85,7 @@ body{
 }
 
   body.p5-mode{
-  background:
-    repeating-linear-gradient(
-      120deg,
-      #ff0033 0px,
-      #ff0033 10px,
-      black 10px,
-      black 40px
-    );
-  animation: p5shake 0.15s infinite;
+  background: red;
 }
   /* 揺れ */
 @keyframes p5shake{
@@ -108,7 +100,8 @@ body{
   content:"";
   position:fixed;
   inset:0;
-  background:rgba(255,0,0,0.1);
+  background:url("noise.png");
+  opacity:0.1;
   pointer-events:none;
 }
 
@@ -438,7 +431,7 @@ document.querySelectorAll(".p5-trigger").forEach(card => {
     document.body.classList.toggle("p5-mode");
   });
 });
-
+document.body.classList.add("p5-mode");
     document.body.classList.remove("p5-mode");
   
 </script>
