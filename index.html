@@ -294,7 +294,28 @@ a:hover {
 .footer a:hover{
   opacity:0.6;
 }
-  
+
+  .to-top{
+  position:fixed;
+  right:20px;
+  bottom:20px;
+
+  padding:12px 16px;
+  border:1px solid white;
+  background:black;
+  color:white;
+
+  cursor:pointer;
+  opacity:0;
+  pointer-events:none;
+
+  transition:0.3s;
+}
+
+.to-top.show{
+  opacity:1;
+  pointer-events:auto;
+}
   
 </style>
 </head>
@@ -437,6 +458,25 @@ document.querySelectorAll(".p5-trigger").forEach(card => {
     document.body.classList.toggle("p5-mode");
   });
 });
+
+    <script>
+const btn = document.getElementById("toTop");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 300) {
+    btn.classList.add("show");
+  } else {
+    btn.classList.remove("show");
+  }
+});
+
+btn.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+});
+</script>
   
 </script>
 
@@ -447,6 +487,8 @@ document.querySelectorAll(".p5-trigger").forEach(card => {
     <a href="https://x.com/aquma7fffd4">X</a>
   </p>
 </footer>
+
+  <button id="toTop" class="to-top">▲ TOP</button>
   
 </body>
 </html>
