@@ -123,12 +123,16 @@ nav a:hover{
 
 .card{
   border:1px solid #333;
-
   padding:40px;
 
-  transition:.3s;
-}
+  opacity:0;
+  transform:translateY(100px);
 
+  transition:
+    opacity 2s,
+    transform 2s;
+}
+  
 .card.show{
   opacity:1;
   transform:translateY(0);
@@ -258,7 +262,6 @@ Star Fox</p>
 
 
   <script>
-
 const cards = document.querySelectorAll(".card");
 
 const observer = new IntersectionObserver((entries)=>{
@@ -266,7 +269,11 @@ const observer = new IntersectionObserver((entries)=>{
   entries.forEach((entry)=>{
 
     if(entry.isIntersecting){
-      entry.target.classList.add("show");
+
+      setTimeout(()=>{
+        entry.target.classList.add("show");
+      },300);
+
     }
 
   });
@@ -276,9 +283,7 @@ const observer = new IntersectionObserver((entries)=>{
 cards.forEach((card)=>{
   observer.observe(card);
 });
-
 </script>
-
   
 </body>
 </html>
