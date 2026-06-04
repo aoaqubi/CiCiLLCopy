@@ -58,17 +58,18 @@ nav a:hover{
 }
 
 body{
+  transition: background 0.5s;
    color: white;
   .hero h1,
 .solutions h2,
 .card h3 {
   color: white;
 }
-  background:
-
-  radial-gradient(circle, rgba(255,255,255,.9) 1px, transparent 1px),
-  radial-gradient(circle, rgba(255,255,255,.6) 2px, transparent 2px),
-  radial-gradient(circle, rgba(255,255,255,.3) 1px, transparent 1px),
+  background:/* 通常背景（今のまま） */
+    
+    radial-gradient(circle, rgba(255,255,255,.9) 1px, transparent 1px),
+    radial-gradient(circle, rgba(255,255,255,.6) 2px, transparent 1px),
+    #0d0d0d;
 
   #0d0d0d;
 
@@ -81,6 +82,26 @@ body{
     0 0,
     50px 80px,
     120px 200px;
+}
+
+  body.p5-mode{
+  background:
+    repeating-linear-gradient(
+      120deg,
+      #ff0033 0px,
+      #ff0033 10px,
+      black 10px,
+      black 40px
+    );
+  animation: p5shake 0.15s infinite;
+}
+  /* 揺れ */
+@keyframes p5shake{
+  0%{ transform: translate(0,0); }
+  25%{ transform: translate(2px,-2px); }
+  50%{ transform: translate(-2px,2px); }
+  75%{ transform: translate(2px,2px); }
+  100%{ transform: translate(0,0); }
 }
   
 .hero{
@@ -313,7 +334,7 @@ a:hover {
 </p>
 </div>
 
-<div class="card">
+<div class="card p5-trigger">
 <h3>Persona</h3>
 <p>
 ペルソナを解放する
@@ -398,6 +419,13 @@ const observer = new IntersectionObserver((entries)=>{
 cards.forEach((card)=>{
   observer.observe(card);
 });
+    
+document.querySelectorAll(".p5-trigger").forEach(card => {
+  card.addEventListener("click", () => {
+    document.body.classList.toggle("p5-mode");
+  });
+});
+  
 </script>
 
   <footer class="footer">
