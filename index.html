@@ -189,6 +189,10 @@ body.p5-mode .card p{
     border-color 0.4s,
     box-shadow 0.4s;
 
+  position: relative;
+  z-index: 1;
+  -webkit-tap-highlight-color: transparent;
+
   cursor: pointer;
 }
 
@@ -202,10 +206,11 @@ body.p5-mode .card p{
   opacity:1;
   transform:translateY(0);
 }
-
+　.card h3,
   .card p{
   color:#999;
   line-height:1.8;
+    pointer-events: none;
 }
 
   .card-image{
